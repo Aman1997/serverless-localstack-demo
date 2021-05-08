@@ -8,7 +8,7 @@
 - Run ```npm run deploy:localstack``` to deploy the stack in the localstack environment.
 - Once the deployment is completed you can test the lambdas locally by running ```npm run local-create``` and ```npm run local-read```.
 
-<br><br><br><br>
+<br><br>
 
 ### Testing
 Jest has been used to write integration tests for the lambdas. To run the Jest tests, run the command ```npm run test```. <br><br>
