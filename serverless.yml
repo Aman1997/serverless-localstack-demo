@@ -39,7 +39,6 @@ functions:
     handler: read.handler  
 
 
-
 resources:
  Resources:
    DynamoDBTable:

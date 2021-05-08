@@ -8,6 +8,7 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 let response = {};
 
 module.exports.handler = async (event) => {
+  // checking if the payload has the required fields
   if (!event?.title || !event?.task)
     return { statusCode: 500, body: "Payload values missing" };
 

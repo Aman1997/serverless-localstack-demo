@@ -9,6 +9,7 @@ let params = {};
 module.exports.handler = async (event) => {
 
   try {
+    // checking whether the id exists
     if (event.id) {
       params = {
         TableName: process.env.TABLE_NAME,
