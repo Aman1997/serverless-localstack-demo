@@ -11,7 +11,7 @@
 <br><br>
 
 ### Testing
-Jest has been used to write integration tests for the lambdas. To run the Jest tests, run the command ```npm run test```. <br><br>
+Jest has been used to write integration tests for the lambdas. To run the Jest tests, run the command ```npm run test```. <br>
 
 ```create-test-event.json``` and ```read-test-event.json``` to mock the events for lambda. If no Id is mentioned in the event object (``{ "id" : ""}``) the lambda returns all the records.
 
