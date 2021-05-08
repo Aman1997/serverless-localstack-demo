@@ -1,0 +1,24 @@
+{
+  "name": "assignment_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "create.js",
+  "scripts": {
+    "test": "jest",
+    "local-create": "sls invoke local -f create -l -p create-test-event.json",
+    "local-read": "sls invoke local -f read -l -p read-test-event.json",
+    "deploy:localstack": "sls deploy --stage local"
+  },
+  "keywords": [],
+  "author": "Aman",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.903.0",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "serverless-localstack": "^0.4.31"
+  },
+  "dependencies": {
+    "uuidv4": "^6.2.7"
+  }
+}

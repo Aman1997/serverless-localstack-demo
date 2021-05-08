@@ -1,0 +1,6 @@
+{
+    "Lambda": "http://localhost:4566",
+    "Dynamodb": "http://localhost:4566",
+    "Cloudformation": "http://localhost:4566",
+    "S3": "http://localhost:4566"
+}

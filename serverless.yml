@@ -1,0 +1,52 @@
+service: assignment-1
+
+frameworkVersion: '2'
+
+plugins:
+  - serverless-localstack
+
+custom:
+  localstack:
+    stages:
+      - local
+      - dev
+    endpointFile: endpoint.json
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+# you can add statements to the Lambda function's IAM Role here
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:*"
+      Resource: "*"
+  environment:
+    TABLE_NAME: my-assignment-1-db
+
+functions:
+  create:
+    handler: create.handler
+  read: 
+    handler: read.handler  
+#    events:
+#      - httpApi:
+#          path: /users/create
+#          method: get
+
+
+resources:
+ Resources:
+   DynamoDBTable:
+     Type: AWS::DynamoDB::Table
+     Properties:
+        TableName: my-assignment-1-db
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH            
+        BillingMode: PAY_PER_REQUEST
