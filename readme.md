@@ -1,4 +1,4 @@
-## Assignment-1
+## Demo App
 2 lambdas, namely create and read and 1 dynamodb table has been created as part of the stack for the assignment. 1 out of the 2 lambdas is responsible for creating a record in dynamo db table as per the event object while the other is responsible to fetch the record/s as per event object. <br><br>
 
 ### To deploy the stack to localstack and run test locally
